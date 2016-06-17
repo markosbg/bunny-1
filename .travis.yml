@@ -21,7 +21,7 @@ script:
   - cd target
   - cd testbacklog
   - ls -ltra
- # - mvn exec:java -pl rabix-tests -Dexec.mainClass="TestRunner"
+ 
 
 #  - mvn org.codehaus.mojo:exec-maven-plugin:1.5.0:java -pl rabix-tests -Dexec.mainClass="org.rabix.tests.TestRunner" | grep -Ev '(^\[|Download\w+:)'
 #
