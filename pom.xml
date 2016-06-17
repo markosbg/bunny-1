@@ -16,6 +16,7 @@
 		<module>rabix-common</module>
 		<module>rabix-backend-local</module>
     <module>rabix-transport</module>
+    <module>rabix-tests</module>
   </modules>
 
 	<properties>

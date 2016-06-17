@@ -1,0 +1,25 @@
+test1:
+  app: testbacklog/grep.cwl.yaml
+  inputs: testbacklog/grep.inputs.yaml
+  runtime: 60
+  expected:
+    outfile:
+      class: File
+      name: out.txt
+      size: 37
+test2:
+  app: testbacklog/grep.cwl.yaml
+  inputs: testbacklog/grep.inputs.yaml
+  expected:
+    outfile:
+      class: File
+      name: out.txt
+      size: 36
+test3:
+  app: testbacklog/grep.cwl.yaml
+  inputs: testbacklog/grep.inputs.yaml
+  expected:
+    outfile:
+      class: File
+      name: out.txt
+      size: 37

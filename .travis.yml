@@ -1,0 +1,31 @@
+sudo: required
+language: java
+
+script:
+  - mvn clean install package
+  - pwd
+  - ls -ltra
+# - cd rabix-tests
+# - ls -lstra
+  - mvn org.codehaus.mojo:exec-maven-plugin:1.5.0:java -pl rabix-tests -Dexec.mainClass="org.rabix.tests.TestRunner" -e -X
+ #- mvn org.codehaus.mojo:exec-maven-plugin:1.5.0:java -pl rabix-tests -Dexec.mainClass="org.rabix.tests.TestRunner" -Dexec.args="/home/travis/build/markosbg/markoBunny/rabix-tests/testbacklog ./rabix.sh" -e -X 
+ #- mvn exec:java -Dexec.mainClass="org.rabix.tests.TestRunner" -Dexec.args="/home/travis/build/markosbg/markoBunny/rabix-tests/testbacklog ./rabix.sh" -e -X
+  - pwd
+  - cd rabix-tests
+  - ls -ltra
+  - pwd
+  - cd ..
+  - cd rabix-backend-local
+  - pwd
+  - ls -ltra
+  - cd target
+  - cd testbacklog
+  - ls -ltra
+ # - mvn exec:java -pl rabix-tests -Dexec.mainClass="TestRunner"
+
+#  - mvn org.codehaus.mojo:exec-maven-plugin:1.5.0:java -pl rabix-tests -Dexec.mainClass="org.rabix.tests.TestRunner" | grep -Ev '(^\[|Download\w+:)'
+#
+
+#mvn org.codehaus.mojo:exec-maven-plugin:1.5.0:java -pl rabix-tests -Dexec.mainClass="org.rabix.tests.TestRunner" | grep -Ev '(^\[|Download\w+:)'
+
+#mvn exec:java -pl rabix-tests -Dexec.mainClass="org.rabix.tests.TestRunner"
