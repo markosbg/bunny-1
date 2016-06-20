@@ -64,8 +64,7 @@ public class TestRunner {
               Entry thisEntry = (Entry) entries.next();
               Object test_name = thisEntry.getKey();
               Object test = thisEntry.getValue();
-              logger
-                  .info("---------------------------------------------------------------------------------------------------------------------------------------------");
+
               logger.info("Running test: " + test_name + " with given parameters:");
               Map<String, Map<String, LinkedHashMap>> mapTest = (Map<String, Map<String, LinkedHashMap>>) test;
               logger.info("  app: " + mapTest.get("app"));
@@ -82,7 +81,7 @@ public class TestRunner {
               logger.info("\nGenerated result file:");
               logger.info(resultText);
               testPassed = validateTestCase(mapTest, resultData);
-              logger.info("\nTest result: ");
+              logger.info("Test result: ");
               if (testPassed) {
                 logger.info(test_name + " PASSED");
 
@@ -101,22 +100,16 @@ public class TestRunner {
 
         if (success) {
 
-          logger
-              .info("---------------------------------------------------------------------------------------------------------------------------------------------");
           logger.info("Test suite passed successfully.");
-          logger
-              .info("---------------------------------------------------------------------------------------------------------------------------------------------");
+
         } else {
-          logger
-              .info("---------------------------------------------------------------------------------------------------------------------------------------------");
           logger.info("Test suite failed.");
           logger.info("Failed test number: " + failedTests.size());
           logger.info("Failed tests:");
           for (Object test : failedTests) {
             logger.info(test.toString());
           }
-          logger
-              .info("---------------------------------------------------------------------------------------------------------------------------------------------");
+
         }
       }
     }
